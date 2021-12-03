@@ -1,15 +1,36 @@
-.porta {
+.area {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 15px;
-
-  /* temp */
   height: var(--area-porta-altura);
   width: var(--area-porta-largura);
+  margin: 5px;
+}
+
+.portal {
+  display: flex;
+  flex-grow: 1;
+  border-left: 4px solid brown;
+  border-top: 4px solid brown;
+  border-right: 4px solid brown;
+  width: 90%;
+}
+
+.porta {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
   background-color: chocolate;
 }
 
 .numero {
   font-size: 3rem;
+}
+
+.chao {
+  height: 10px;
+  width: 100%;
+  background-color: #ddd;
 }
