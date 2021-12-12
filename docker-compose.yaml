@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  frontent:
+    container_name: 'montyhall-fronend'
+    tty: true
+    build:
+      context: .
+    volumes:
+      - ./src:/app/src
+    ports:
+      - "3000:3000"
