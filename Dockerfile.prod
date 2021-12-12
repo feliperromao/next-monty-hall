@@ -1,0 +1,15 @@
+# state 1 - build
+FROM node:15 AS build
+WORKDIR /app
+COPY . .
+RUN yarn build
+
+
+# stage 2 - production
+FROM node:15-alpine
+WORKDIR /app
+COPY --from=build /app .
+RUN rm -rf /app/src 
+
+EXPOSE 3000
+ENTRYPOINT ["yarn", "start"]
