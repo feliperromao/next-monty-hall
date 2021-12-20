@@ -1,4 +1,4 @@
-export default class Porta {
+export default class PortaModel {
 
     constructor(
         private numero: number,
@@ -25,21 +25,21 @@ export default class Porta {
         return this.aberta
     }
 
-    public removerSelecao(): Porta {
+    public removerSelecao(): PortaModel {
         const selecionada = false
 
-        return new Porta(this.numero, this.temPresente, selecionada, this.aberta)
+        return new PortaModel(this.numero, this.temPresente, selecionada, this.aberta)
     }
 
-    public alternarSelecao(): Porta {
+    public alternarSelecao(): PortaModel {
         const selecionada = !this.selecionada
 
-        return new Porta(this.numero, this.temPresente, selecionada, this.aberta)
+        return new PortaModel(this.numero, this.temPresente, selecionada, this.aberta)
     }
 
-    public abrir(): Porta {
+    public abrir(): PortaModel {
         const aberta = true
 
-        return new Porta(this.numero, this.temPresente, this.selecionada, aberta)
+        return new PortaModel(this.numero, this.temPresente, this.selecionada, aberta)
     }
 }
